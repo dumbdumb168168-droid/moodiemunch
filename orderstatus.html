@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Status</title>
+    <link rel="stylesheet" href="status.css">
+</head>
+<body>
+    <div class="success">
+        <form action="column">
+            <h1>Order Successful</h1>
+            <img src="photos/success.png" alt="" width="10%">
+            <br>
+            <div class="info">
+                <span>Payment Type</span>
+                <div class="type">Cash On Delivery</div>
+            </div>
+
+            <div class="info">
+                <span>Order ID</span>
+                <span id="orderId">Generating...</span>
+            </div>
+
+            <div class="advice">
+                <h2>Advice*</h2>
+                <p>You may prepare the exact amount for the courier to collect when your parcel is delivered to your doorstep.</p>
+            </div>
+            <a href="track.html" class="button">
+                <input type="button" value="Track My Order">
+            </a>
+            <a href="index.html" class="button">
+                <input type="button" value="Back To Home Page">
+            </a>
+        </form>
+    </div>
+
+  <script>
+    // Generate a random order ID
+    const orderID = 'ORD-' + Math.floor(10000000 + Math.random() * 90000000);
+    document.getElementById("orderId").textContent = orderID;
+
+    // Save order to localStorage
+    const orderData = {
+      id: orderID,
+      payment: "Cash On Delivery",
+      status: "Processing",
+      date: new Date().toLocaleString()
+    };
+
+    localStorage.setItem(orderID, JSON.stringify(orderData));
+    localStorage.setItem("lastOrderId", orderID);
+  </script>
+
+
+
+</body>
+</html>

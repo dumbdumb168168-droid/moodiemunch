@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Payment</title>
+    <!--load css-->
+    <link rel="stylesheet" href="visa.css">
+    <!--load javascript-->
+    <script src="submit.js"></script>
+</head>
+<body>
+    <!--display card info-->
+    <div class="visa">
+        <div class="card">
+           <div class="front">
+            <div class="image">
+                <img src="chip-removebg-preview.png" alt="">
+                <img src="visa_master-removebg-preview.png" alt="">
+            </div>
+            <div class="cardnumber">#### #### #### ####</div>
+            <div class="cardbox">
+                <div class="cardinfo">
+                    <span>Card Holder</span>
+                    <div class="cardholder">Full Name</div>
+                </div>
+                <div class="cardinfo">
+                    <span>Expires</span>
+                    <div class="Expiration">
+                        <span class="exp-month">Month</span>
+                        <span class="exp-year">Year</span>
+                    </div>
+                </div>
+            </div>
+           </div> 
+
+           <!--card info behind-->
+           <div class="back">
+            <div class="blackline"></div>
+            <div class="cardinfo">
+                <span>CVV/CVC</span>
+                <div class="cvv-box"></div>
+                <img src="photos/visa_master-removebg-preview.png" alt="">
+            </div>
+           </div>
+
+        </div>
+
+        <!--input card details-->
+        <form action="">
+            <div class="input">
+                <!--input card number-->
+                <span>Card Number</span>
+                <input type="text" maxlength="16" pattern="^\d{16}$" class="card-number" placeholder="card number" required>
+            </div> 
+            <div class="input">
+                <!--input card holder name-->
+                <span>Card Holder</span>
+                <input type="text" class="card-holder" placeholder="holder name" required>
+            </div>
+            <div class="infobox">
+                <div class="input">
+                    <!--input expiration month and year-->
+                    <span>Expiration Month</span>
+                    <select name="" id="" class="month">
+                        <option value="month" selected disabled>Month</option>
+                        <option value="01">01</option>
+                        <option value="02">02</option>
+                        <option value="03">03</option>
+                        <option value="04">04</option>
+                        <option value="05">05</option>
+                        <option value="06">06</option>
+                        <option value="07">07</option>
+                        <option value="08">08</option>
+                        <option value="09">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                    </select>
+                </div>
+                <div class="input">
+                    <span>Expiration Year</span>
+                    <select name="" id="" class="year">
+                        <option value="year" selected disabled>Year</option>
+                        <option value="22">2022</option>
+                        <option value="22">2023</option>
+                        <option value="22">2024</option>
+                        <option value="22">2025</option>
+                        <option value="22">2026</option>
+                        <option value="22">2027</option>
+                        <option value="22">2028</option>
+                        <option value="22">2029</option>
+                        <option value="22">2030</option>
+                        <option value="22">2031</option>
+                        <option value="22">2032</option>
+                    </select>
+                </div>
+                <div class="input">
+                    <!--input ccv/cvc-->
+                    <span>CVV/CVC</span>
+                    <input type="text" maxlength="3" class="cvv" required>
+                </div>
+            </div>
+            <!--submit button-->
+            <a href="payment.html"><input type="button" value="&#9668; Back" class="backbtn"></a>
+            <a href="orderstatusvisa.html"><input type="button" value="SUBMIT" class="submitbtn"></a>
+        </form>
+    </div>
+<!--script that display the details haved key in and display at the card above-->
+<script>
+document.querySelector('.card-number').oninput = () =>{
+    document.querySelector('.cardnumber').innerText = document.querySelector('.card-number').value;
+}
+
+document.querySelector('.card-holder').oninput = () =>{
+    document.querySelector('.cardholder').innerText = document.querySelector('.card-holder').value;
+}
+
+document.querySelector('.month').oninput = () =>{
+    document.querySelector('.exp-month').innerText = document.querySelector('.month').value;
+}
+
+document.querySelector('.year').oninput = () =>{
+    document.querySelector('.exp-year').innerText = document.querySelector('.year').value;
+}
+
+document.querySelector('.cvv').onmouseenter = () =>{
+    document.querySelector('.front').style.transform = 'perspective(1000px) rotateY(-180deg)';
+    document.querySelector('.back').style.transform = 'perspective(1000px) rotateY(0deg)';
+}
+
+document.querySelector('.cvv').onmouseleave = () =>{
+    document.querySelector('.front').style.transform = 'perspective(1000px) rotateY(0deg)';
+    document.querySelector('.back').style.transform = 'perspective(1000px) rotateY(180deg)';
+}
+
+document.querySelector('.cvv').oninput = () =>{
+    document.querySelector('.cvv-box').innerText = document.querySelector('.cvv').value;
+}
+
+</script>
+
+
+</body>
+</html>

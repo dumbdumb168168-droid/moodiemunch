@@ -1,0 +1,70 @@
+*{
+    font-family: sans-serif;
+    margin: 0;
+	padding:0;
+    box-sizing: border-box;
+    outline: none;
+	border: none;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.label h1{
+	font-family: sans-serif;
+	color: #FFFFFF;
+    margin-left: 7em;
+}
+
+.shipping{
+    min-height: 60em;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    padding-bottom: 60px;
+}
+
+.shipping form{
+    background:black;
+    border-radius: 15px;
+    padding: 20px;
+    width: 800px;
+    padding-top: 15px;
+}
+.shipping form .addressbox{
+    margin-top: 15px;
+}
+
+.shipping form .addressbox span{
+    display: block;
+    color: #FFFFFF;
+    padding-bottom: 5px;
+}
+
+.shipping form .addressbox input,.shipping form .statebox select{
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    color: grey;
+}
+
+.shipping form .addressbox{
+    display: flex;
+    gap:15px;
+}
+
+.shipping form .addressbox .statebox{
+    flex: 1 1 150px;
+}
+.shipping form .button{
+    width:49%;
+    background: #ffffff;
+    margin-top: 10px;
+    margin-left: 4px;
+    padding: 10px;
+    font-size:19px;
+    color: black;
+    border-radius: 10px;
+}

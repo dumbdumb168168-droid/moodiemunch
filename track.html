@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Track Order</title>
+  <link rel="stylesheet" href="moo.css">
+</head>
+<body>
+    <div class="track">
+        <div class="cards">
+            <h2>Track Your Order 🧁</h2>
+            <input type="text" id="trackId" placeholder="Enter your Order ID (e.g. ORD-12345678)">
+            <button class="btn" onclick="trackOrder()">Track</button>
+            <a href="index.html" class="button">
+                <input type="button" value="Back To Home Page">
+            </a>
+            <div id="status"></div>
+        </div>
+    </div>
+
+  <script>
+    function trackOrder() {
+    const inputId = document.getElementById("trackId").value.trim();
+    const orderData = localStorage.getItem(inputId);
+
+      if (orderData) {
+        const order = JSON.parse(orderData);
+        document.getElementById("status").innerHTML = `
+          ✅ <strong>Order Found!</strong><br>
+          <b>Order ID:</b> ${order.id}<br>
+          <b>Payment:</b> ${order.payment}<br>
+          <b>Status:</b> ${order.status}<br>
+          <b>Date:</b> ${order.date}<br>
+          <br>🧁 Thank you for your purchase!
+        `;
+      } else {
+        document.getElementById("status").innerHTML = "❌ Order not found. Please check your Order ID.";
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Option</title>
+    <!--link css-->
+    <link rel="stylesheet" href="payment.css">
+</head>
+<body>
+<div class="paymentgateway">
+    <form id="payment">
+        <h1>Payment Option</h1>
+        <br>
+        <!--select payment method-->
+        <div class="option">
+            <div class="card">
+                <span> Debit/Credit card</span>
+                <br>
+                <div class="card">
+                    <!--redirect to card payment page-->
+                  <a href="visa.html">
+                    <img src="visa.jpg" alt="visa" height="50%" width="50%"/>
+                  </a>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="option">
+            <span>Cash On Delivery</span>
+                <div class="cash">
+                    <!--click to check order status-->
+                    <a href="orderstatus.html"><img src="cod-removebg-preview.png" alt="" width="50%"></a>
+                </div>
+                <a href="delivery.html"><input class="button" id="back" type="button" value="&#9668; Back"></a>
+        </div>
+    </form>
+</div>
+</body>
+</html>

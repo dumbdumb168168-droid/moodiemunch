@@ -1,0 +1,61 @@
+*{
+    font-family: sans-serif;
+    margin: 0;
+	padding:0;
+    box-sizing: border-box;
+    outline: none;
+	border: none;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.paymentgateway h1{
+	font-family: sans-serif;
+	color: black;
+    margin-left: 7em;
+}
+
+.paymentgateway{
+    min-height: 60em;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    padding-bottom: 60px;
+}
+
+.paymentgateway form{
+    background:black;
+    border-radius: 15px;
+    padding: 20px;
+    width: 800px;
+    padding-top: 15px;
+}
+
+.paymentgateway form .option span{
+    display: block;
+    margin-left: 12em;
+    font-size: 22px;
+    color: #ffffff;
+    padding-bottom: 5px;
+}
+
+.paymentgateway form .option .card img{
+    margin-left: 12em;
+    border-radius: 10px;
+}
+
+.paymentgateway form .option .cash img{
+    margin-left: 12em;
+}
+
+.paymentgateway form .button{
+    width:100%;
+    background: #ffffff;
+    margin-top: 10px;
+    padding: 10px;
+    font-size:19px;
+    color: black;
+    border-radius: 10px;
+}

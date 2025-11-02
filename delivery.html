@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Delivery</title>
+<!--link css-->
+<link href="delivery.css" rel="stylesheet">
+</head>
+
+<body>
+<header>	
+
+
+</header>
+<!--key in shipping details and contact number-->
+<div class="shipping">
+<form action="address">
+	<div class="label">
+		<!--label-->
+		<h1>Delivery Address</h1>
+	</div>
+	<!--name-->
+	<div class="addressbox">
+		<span>Contact</span>
+		<input type="text" class="name" placeholder="Full Name">
+	</div> 
+	<!--contact number-->
+	<div class="addressbox">
+		<span>Contact Number</span>
+		<input type="text" class="phonenum" placeholder="Phone Number" pattern="^\d{10}$" maxlength="10">
+	</div>
+	<!-- delivery address-->
+	<div class="addressbox">
+		<span>House No.,Street Name</span>
+		<input type="text" class="unit" placeholder="House No.,Street Name" >
+	</div>
+	<!--delivery district-->
+	<div class="addressbox">
+		<span>District</span>
+		<input type="text" class="district" placeholder="Area" >
+	</div>
+	<!--delivery city-->
+	<div class="addressbox">
+		<span>City</span>
+		<input type="text" class="city" placeholder="City" >
+	</div>
+	<!--delivery state-->
+	<div class="addressbox">
+		<div class="statebox">
+			<span>State</span>
+			<select name="" id="" class="state">
+				<option value="States" selected disabled>States</option>
+				<option value="Selangor">Selangor</option>
+				<option value="Kuala Lumpur">Kuala Lumpur</option>
+				<option value="Penang">Penang</option>
+				<option value="Johor">Johor</option>
+				<option value="Kelantan">Kelantan</option>
+				<option value="Terengganu">Terengganu</option>
+				<option value="Perak">Perak</option>
+				<option value="Kedah">Kedah</option>
+				<option value="Perlis">Perlis</option>
+				<option value="Negeri Sembilan">Negeri Sembilan</option>
+				<option value="Pahang">Pahang</option>
+				<option value="Melaka">Melaka</option>
+				<option value="Sabah">Sabah</option>
+				<option value="Sarawak">Sarawak</option>
+				<option value="Labuan">Labuan</option>
+				<option value="Putrajaya">Putrajaya</option>
+			</select>
+		</div>
+		<!--delivery postcode-->
+		<div class="postcodebox">
+			<span>Postcode</span>
+			<input type="text" pattern="^\d{5}$" maxlength="5" class="postcode" placeholder="00000">
+		</div>
+	</div>
+	<!--select courier-->
+	<fieldset id="delivery">
+		<input type="radio" name="deliverymethod" value="poslaju" checked><img src="lalamove-logo-brandlogo.net_-512x512.png" alt="Pos Laju" height="50%" width="20%"/>
+	</fieldset>
+<!--button back to last page or continue to payment page-->
+<a href="index.html"><input class="button" id="back" type="button" value="&#9668; Back"></a> 
+<a href="payment.html"><input type="button" id="submit" class="button" value="Next Step &#9658;"></a>
+</form>
+</div>
+
+</body>
+<footer>
+
+</footer>
+</html>

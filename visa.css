@@ -1,0 +1,181 @@
+*{
+    font-family: sans-serif;
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.visa{
+    min-height: 60em;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    padding-bottom: 60px;
+}
+
+.visa form{
+    background:black;
+    border-radius: 15px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 600px;
+    padding-top: 160px;
+}
+.visa form .input{
+    margin-top: 20px;
+}
+
+.visa form .input span{
+    display: block;
+    color: lightgrey;
+    padding-bottom: 5px;
+}
+
+.visa form .input input,.visa form .input select{
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    color: grey;
+}
+
+.visa form .infobox{
+    display: flex;
+    gap:15px;
+}
+
+.visa form .infobox .input{
+    flex: 1 1 150px;
+}
+
+.visa form .backbtn{
+    width:49%;
+    background: #ffffff;
+    margin-top: 10px;
+    margin-left: 4px;
+    padding: 10px;
+    font-size:19px;
+    color: black;
+    border-radius: 10px;
+}
+
+.visa form .submitbtn{
+    width: 47%;
+    background: #ffffff;
+    margin-top: 20px;
+    margin-left: 10px;
+    border-radius: 10px;
+    padding: 10px;
+    font-size:20px;
+    color: black;
+    cursor: pointer;
+}
+
+.visa form .submitbtn :hover{
+    letter-spacing: 2px;
+    opacity: .8;
+}
+
+.visa .card{
+    margin-bottom: -150px;
+    position: relative;
+    height: 250px;
+    width: 400px;
+}
+
+.visa .card .front{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: #B8860B;
+    border-radius: 5px;
+    backface-visibility: hidden;
+    box-shadow: 0 15px 25px rgba(0, 0, 0,0.2);
+    padding: 20px;
+    transform: perspective(1000px) rotateY(0deg);
+    transition:transform 1.3s ease-out;
+}
+
+.visa .card .front .image{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+
+.visa .card .front .image img{
+    height: 50px;
+}
+
+.visa .card .front .cardnumber{
+    padding: 30px 0;
+    font-size: 22px;
+    color: white;
+}
+
+.visa .card .front .cardbox{
+    display: flex;
+}
+
+.visa .card .front .cardbox .cardinfo:nth-child(1){
+    margin-right: auto;
+}
+
+.visa .card .front .cardbox .cardinfo{
+    font-size: 15px;
+    color: white;
+}
+
+.visa .card .back{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height:100%;
+    width: 100%;
+    background:#B8860B;
+    border-radius: 5px;
+    padding: 20px 0;
+    text-align: right;
+    backface-visibility: hidden;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+    transform: perspective(1000px) rotateY(180deg);
+    transition:transform 1.3s ease-out;
+}
+
+.visa .card .back .blackline{
+    background: black;
+    width: 100%;
+    margin: 10px 0;
+    height: 50px;
+}
+
+.visa .card .back .cardinfo{
+    padding: 0 20px;
+}
+
+.visa .card .back .cardinfo span{
+    color: white;
+    font-size: 15px;
+}
+
+.visa .card .back .cardinfo .cvv-box{
+    height: 50px;
+    padding: 10px;
+    margin-top: 5px;
+    color: darkgrey;
+    background: white;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.visa .card .back .cardinfo img{
+    margin-top: -5px;
+    height: 100px;
+}

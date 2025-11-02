@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Moodie Munch — Find Your Flavor</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="moo.css">
+</head>
+<body>
+  <header>
+  <nav class="nav container">
+    <a href="#" class="brand">
+      <img src="logo.jpg" alt="Moodie Munch Logo" class="logo" />
+      <span>Moodie Munch</span>
+    </a>
+      <div class="nav-links">
+        <a href="#why">Why Us</a>
+        <a href="#menu">Menu</a>
+        <a href="#about">About</a>
+        <a href="#clients">Clients</a>
+        <a href="https://forms.gle/3Dyq3EVm6AZs9qWj6" target="_blank" rel="noopener noreferrer">Feedback</a>
+        <a><button class="cart-toggle">Cart (<span id="cart-count">0</span>)</button></a>
+      </div>
+    </nav>
+  </header>
+
+<!-- Cart Sidebar -->
+  <div class="cart" id="cart">
+    <div class="cart-header">
+      <h3>Your Cart</h3>
+      <span id="close-cart" style="cursor:pointer;">✖</span>
+    </div>
+    <div class="cart-items" id="cart-items"></div>
+    <div class="cart-footer">
+      <div class="voucher-section">
+        <input type="text" id="voucherInput" placeholder="Enter voucher code">
+        <button class="apply-btn" onclick="applyVoucher()">Apply</button>
+        <p id="voucherMessage"></p>
+      </div>
+      <div class="cart-total">
+        <span>Total:</span>
+        <span id="cart-total">MYR0.00</span>
+      </div>
+      <a href="delivery.html"><button class="checkout-btn">Checkout</button></a>
+    </div>
+  </div>
+
+  <section class="hero" id="mood">
+    <div class="container wrap">
+      <div>
+
+        <h1>Delights
+          <span class="sub">Indulge your senses in exquisitely balanced bakes — matched to your mood.</span>
+        </h1>
+        <p>Every mood deserves a flavor. Whether you’re craving calm, comfort, or celebration — our Moodie Bot listens to how you feel and pairs you with the perfect cupcake. From Mocha Chip Bliss to Mango Dream, every bite is crafted to lift your spirit and sweeten your moment.
+Less sugar, more soul — made fresh daily.</p>
+        <div class="actions">
+          <!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+          <a class="btn alt" href="#menu">Browse Menu</a>
+        </div>
+      </div>
+      <div class="hero-media">
+        <img class="card" alt="Cupcakes" src="cupcakes.jpeg" style="border-radius:24px; box-shadow:var(--ring)"/>
+      </div>
+    </div>
+    
+  </section>
+
+  <section id="why">
+    <div class="container">
+      <h2 class="section-title">Why Choose Us</h2>
+      <div class="features">
+        <div class="feature">
+          <h4>Quality Ingredients</h4>
+          <p>Real vanilla, ceremonial matcha, Belgian cocoa, and fresh fruit — nothing fake, ever.</p>
+        </div>
+        <div class="feature">
+          <h4>Health‑Conscious</h4>
+          <p>“Less‑sweet” philosophy with balanced recipes and portion‑friendly bites.</p>
+        </div>
+        <div class="feature">
+          <h4>Expert Craftsmanship</h4>
+          <p>Hand‑made by a small, passionate team who obsesses over the details.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="menu">
+    <div class="container">
+      <h2 class="title">Our Cupcakes</h2>
+
+      <div class="product-grid" id="product-grid"></div>
+
+      <div class="pagination" id="pagination"></div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container two-up">
+      <div class="card panel">
+        <h3>About Our Brand</h3>
+        <p> <strong>Moodie Munch</strong>  is a homepreneur business located in Kuala Lumpur. It was establish on 21st October 2025. At Moodie Munch, desserts aren’t just sweet treats—they’re an experience crafted around how you feel. Whether you’re stressed, energized, calm, or hopeful, our AI-powered mood matcher curates the perfect dessert, edible art, playlist, and affirmation just for you. Each Mood Box is designed to uplift your spirit, indulge your senses, and make every moment memorable</p>
+      </div>
+      <div class="card" style="overflow:hidden">
+        <img alt="Moodie Munch logo" src="logo.jpg">
+      </div>
+    </div>
+  </section>
+
+  <section id="clients">
+    <div class="container">
+      <h2 class="section-title">Our Clients</h2>
+      <div class="testimonials">
+        <div class="tcard">
+          <div class="who">
+            <divclass=> <img alt="Avatar" src="https://i.pinimg.com/474x/0f/78/5d/0f785d55cea2a407ac8c1d0c6ef19292.jpg"style="width:48px; height:48px; border-radius:50%; object-fit:cover; margin-right:12px;">
+            <div><strong>Wei Yuen,Tang</strong><br><span class="muted">Events Planner</span></div>
+          </div>
+          <p>“The mood‑matched cupcakes were the talk of our launch. Elegant, balanced, and so on‑brand.”</p>
+        </div>
+        <div class="tcard">
+          <div class="who">
+            <div class=> <img alt="Avatar" src="https://i.postimg.cc/6Q0QGBg5/fabian.jpg" style="width:48px; height:48px; border-radius:50%; object-fit:cover; margin-right:12px;">
+            <div><strong>Fabian Marc</strong><br><span class="muted">Cafe Owner</span></div>
+          </div>
+          <p>“Good Collaboration with UrbanGround Coffee Business.”</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <footer>
+    <div class="container">
+      <div class="fgrid">
+        <div>
+          <div class="brand"><span class="Moodie Munch Logo"> <img src="logo.jpg"alt= "Moodie Munch Logo" style="width:24px; height:24px; margin-right:8px;"
+            alt=""></span><span>Moodie Munch</span></div> 
+        </div>
+        <div>
+          <strong>Product</strong><br>
+          <a href="#menu">Menu</a><br>
+        </div>
+        <div>
+          <strong>Contact</strong><br>
+          <a href="https://www.instagram.com/moodie_munch67/" target="_blank">Instagram</a><br>
+          <a href="https://www.youtube.com/@MoodieMunch" target="_blank">YouTube</a>
+        </div>
+      </div>
+      <div class="copyright">© 2025 Moodie Munch — Where Emotion Meet Indulgence 🍰.</div>
+    </div>
+  </footer>
+
+  <!-- Floating Moodie Bot -->
+  
+    <script src="https://cdn.botpress.cloud/webchat/v3.3/inject.js"></script>
+    <script src="https://files.bpcontent.cloud/2025/10/30/17/20251030173435-RIERE1CS.js" defer></script>
+    
+
+<script>
+    const products = [
+      { id: 1, name: "Mocha Chip Bliss", price: 8.00, image: "https://i.postimg.cc/ZqQH8z1H/Mocha.png" },
+      { id: 2, name: "Strawberry Matcha Bliss", price: 8.00, image: "https://i.postimg.cc/9QKw1XQm/Matcha.png" },
+      { id: 3, name: "Vanilla Blueberry Bite", price: 8.00, image: "https://i.postimg.cc/5010kXdj/vanilla.png" },
+      { id: 4, name: "Lemon Sunshine Bite", price: 8.00, image: "https://i.postimg.cc/zD2zTtBC/lemon.png" },
+      { id: 5, name: "Strawberry Sweetheart", price: 8.00, image: "https://i.postimg.cc/P5skMBkv/strawberry.png" },
+      { id: 6, name: "Midnight Choco Bite", price: 8.00, image: "https://i.postimg.cc/NFRwh46h/midnight-choco.png " },
+      { id: 7, name: "Pistachio Rose Kiss", price: 8.00, image: "https://i.postimg.cc/J0V9Qk9j/pistachio.png" },
+      { id: 8, name: "Peachy Glow Muffin", price: 8.00, image: "https://i.postimg.cc/7YBKHzmj/Peach.png" },
+      { id: 9, name: "Mango Dream Bite", price: 8.00, image: "https://i.postimg.cc/kGTv5rFc/mango-dream.png" },
+    ];
+
+     const grid = document.getElementById("product-grid");
+    const pagination = document.getElementById("pagination");
+    const cartPanel = document.getElementById("cart");
+    const cartToggle = document.querySelector(".cart-toggle");
+    const closeCart = document.getElementById("close-cart");
+    const cartItems = document.getElementById("cart-items");
+    const cartTotal = document.getElementById("cart-total");
+    const cartCount = document.getElementById("cart-count");
+
+    let cart = [];
+    let currentPage = 1;
+    const productsPerPage = 3;
+
+    function renderProducts() {
+      grid.innerHTML = "";
+      const start = (currentPage - 1) * productsPerPage;
+      const end = start + productsPerPage;
+      const paginatedProducts = products.slice(start, end);
+
+      paginatedProducts.forEach(p => {
+        const card = document.createElement("div");
+        card.classList.add("product-card");
+        card.innerHTML = `
+          <img src="${p.image}" class="product-img">
+          <h3 class="product-name">${p.name}</h3>
+          <p class="category">${p.category}</p>
+          <div class="price"><span class="new">MYR ${p.price}</span></div>
+          <div class="add-section">
+            <input type="number" id="qty-${p.id}" class="quantity-input" min="1" value="1">
+            <button class="add-to-cart" onclick="addToCart(${p.id})">Add to Cart</button>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+
+      renderPagination();
+    }
+
+    function renderPagination() {
+      pagination.innerHTML = "";
+      const totalPages = Math.ceil(products.length / productsPerPage);
+      for (let i = 1; i <= totalPages; i++) {
+        const btn = document.createElement("button");
+        btn.textContent = i;
+        btn.classList.add("page");
+        if (i === currentPage) btn.classList.add("active");
+        btn.addEventListener("click", () => {
+          currentPage = i;
+          renderProducts();
+        });
+        pagination.appendChild(btn);
+      }
+    }
+
+    function addToCart(id) {
+      const qty = parseInt(document.getElementById(`qty-${id}`).value) || 1;
+      const product = products.find(p => p.id === id);
+      const existing = cart.find(i => i.id === id);
+      if (existing) existing.qty += qty;
+      else cart.push({ ...product, qty });
+      updateCart();
+    }
+
+    function removeFromCart(id) {
+      cart = cart.filter(i => i.id !== id);
+      updateCart();
+    }
+
+    function updateCart() {
+      cartItems.innerHTML = "";
+      let total = 0;
+      cart.forEach(i => {
+        total += i.price * i.qty;
+        const item = document.createElement("div");
+        item.classList.add("cart-item");
+        item.innerHTML = `
+          <img src="${i.image}">  
+          <div class="cart-item-details">
+            <div class="cart-item-name">MYR${i.name}</div>
+            <div class="cart-item-price">MYR${i.price} x MYR${i.qty}</div>
+          </div>
+          <span class="remove" onclick="removeFromCart(MYR${i.id})">✖</span>
+        `;
+        cartItems.appendChild(item);
+      });
+      cartTotal.textContent = `$${total.toFixed(2)}`;
+      cartCount.textContent = cart.reduce((a, b) => a + b.qty, 0);
+    }
+
+    // 💰 Predefined vouchers (offline)
+const vouchers = {
+  "MOODIE10": { type: "percentage", value: 10 }, // 10% off
+};
+
+let discount = 0;
+let activeVoucher = null;
+
+function applyVoucher() {
+  const input = document.getElementById("voucherInput").value.trim().toUpperCase();
+  const message = document.getElementById("voucherMessage");
+  const totalEl = document.getElementById("cart-total");
+
+  if (!input) {
+    message.textContent = "⚠️ Please enter a code";
+    message.className = "error";
+    return;
+  }
+
+  if (vouchers[input]) {
+    const voucher = vouchers[input];
+    let subtotal = cart.reduce((sum, i) => sum + i.price * i.qty, 0);
+
+    // calculate discount
+    discount = voucher.type === "percentage" 
+      ? subtotal * (voucher.value / 100) 
+      : voucher.value;
+
+    const newTotal = Math.max(subtotal - discount, 0);
+    totalEl.textContent = `MYR ${newTotal.toFixed(2)}`;
+    message.textContent = `✅ Voucher "${input}" applied successfully!`;
+    message.className = "success";
+    activeVoucher = input;
+  } else {
+    discount = 0;
+    activeVoucher = null;
+    message.textContent = "❌ Invalid voucher code";
+    message.className = "error";
+    updateCart();
+  }
+}
+
+// ✨ Update cart total (with voucher check)
+function updateCart() {
+  cartItems.innerHTML = "";
+  let total = 0;
+
+  cart.forEach(i => {
+    total += i.price * i.qty;
+    const item = document.createElement("div");
+    item.classList.add("cart-item");
+    item.innerHTML = `
+      <img src="${i.image}">
+      <div class="cart-item-details">
+        <div class="cart-item-name">${i.name}</div>
+        <div class="cart-item-price">MYR ${i.price} x ${i.qty}</div>
+      </div>
+      <span class="remove" onclick="removeFromCart(${i.id})">✖</span>
+    `;
+    cartItems.appendChild(item);
+  });
+
+  // Apply voucher if still active
+  if (activeVoucher && vouchers[activeVoucher]) {
+    const voucher = vouchers[activeVoucher];
+    discount = voucher.type === "percentage"
+      ? total * (voucher.value / 100)
+      : voucher.value;
+  } else {
+    discount = 0;
+  }
+
+  const finalTotal = Math.max(total - discount, 0);
+  cartTotal.textContent = `MYR ${finalTotal.toFixed(2)}`;
+  cartCount.textContent = cart.reduce((a, b) => a + b.qty, 0);
+}
+
+
+    cartToggle.addEventListener("click", () => {
+      cartPanel.classList.toggle("active");
+    });
+    closeCart.addEventListener("click", () => {
+      cartPanel.classList.remove("active");
+    });
+
+    renderProducts();
+  </script>
+
+</body>
+</html>
